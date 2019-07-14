@@ -1,4 +1,12 @@
-Kotlin Hello World Demo
-=======================
+Kotlin Gradle Hello World Demo
+==============================
 
-Hello world from kotlin. Open it in IDE and run `Hello.kt`
+```
+./gradlew compileKotlin
+```
+
+or
+
+```
+./gradlew test
+```
