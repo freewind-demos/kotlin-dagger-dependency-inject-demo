@@ -1,7 +1,27 @@
 package example
 
+import dagger.Component
+import javax.inject.Inject
+
 fun main(args: Array<String>) {
-    println(hello("Kotlin"))
+    val core = Core()
+    DaggerCoreComponent.create().inject(core)
+    core.hello("Dagger")
 }
 
-fun hello(name: String): String = "Hello, $name!"
+@Component
+interface CoreComponent {
+    fun inject(core: Core);
+}
+
+class Core {
+    @Inject
+    lateinit var util: Util
+    fun hello(name: String) {
+        println("Hello, ${util.toUpper(name)}!")
+    }
+}
+
+class Util @Inject constructor() {
+    fun toUpper(s: String) = s.uppercase();
+}

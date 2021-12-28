@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test
 
 class HelloTest {
 
-    @Test
-    fun `hello returns greeting words`() {
-        assertThat(hello("you")).isEqualTo("Hello, you!")
-    }
+//    @Test
+//    fun `hello returns greeting words`() {
+//        assertThat(hello("you")).isEqualTo("Hello, you!")
+//    }
 
 }
